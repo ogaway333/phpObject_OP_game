@@ -1,0 +1,282 @@
+*{
+    font-family: "M PLUS Rounded 1c";
+}
+
+
+.state-font{
+font-family: 'Press Start 2P', cursive;
+
+}
+
+body{
+    position: relative;
+}
+.game_screen{
+    position: relative;
+    margin: 0 auto;
+    width: 750px;
+    height: 100vh;
+    min-height: 850px;
+    overflow: hidden;
+}
+
+.title-h1{
+    position: absolute;
+    color: #ffffff;
+    top: 30%; /*親要素を起点に上から50%*/
+    left: 50%;  /*親要素を起点に左から50%*/
+    transform: translateY(-30%) translateX(-50%); /*要素の大きさの半分ずつを戻す*/
+    -webkit-transform: translateY(-30%) translateX(-50%);
+    font-size: 24px;
+}
+
+.result_panel{
+    position: absolute;
+    padding: 40px;
+    top: 50%; /*親要素を起点に上から50%*/
+    left: 50%;  /*親要素を起点に左から50%*/
+    transform: translateY(-50%) translateX(-50%); /*要素の大きさの半分ずつを戻す*/
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    width: 250px;
+    height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+.result-h2{
+    text-align: center;
+    padding:20px 0;
+    font-size: 16px;
+}
+
+.result_text{
+    color: #555555;
+    font-weight: bold;
+    font-size: 12px;
+    padding-bottom: 15px;
+}
+
+.retry-button{
+    margin: 10px auto;
+    font-size: 12px;
+    padding: 15px;
+    display: block;
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #309EDC;
+    color: #ffffff;
+}
+
+.retry-button:hover{
+    opacity: 0.8;
+}
+
+.start_screen{
+    position: absolute;
+    z-index: 1;
+    width: 750px;
+    height: 100vh;
+    min-height: 850px;
+    background-color: black;
+}
+
+.start_screen span{
+    position: absolute;
+    top: 50%; /*親要素を起点に上から50%*/
+    left: 50%;  /*親要素を起点に左から50%*/
+    transform: translateY(-50%) translateX(-50%); /*要素の大きさの半分ずつを戻す*/
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    font-size: 16px;
+
+    color: #ffffff;
+}
+
+.battle_screen{
+    position: relative;
+    min-height: 350px;
+    background-image: url("../img/background.png");     /* 背景画像指定 */
+    background-repeat:  no-repeat;              /* 背景の繰り返し設定 */
+    background-size: cover;
+    background-position: center;
+}
+
+.countdown{
+    padding: 10px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.state-cover{
+    overflow: hidden;
+}
+
+.mystate{
+    overflow: hidden;
+    float: left;
+}
+
+.state-Player{
+    color: #ffffff;
+    padding: 10px;
+}
+
+.enemystate{
+    overflow: hidden;
+    float: right;
+}
+
+.state-enemy{
+    color: red;
+    padding: 10px;
+}
+
+.monster{
+    position: absolute;
+    top: 80%; /*親要素を起点に上から50%*/
+    left: 50%;  /*親要素を起点に左から50%*/
+    transform: translateY(-80%) translateX(-50%); /*要素の大きさの半分ずつを戻す*/
+    -webkit-transform: translateY(-80%) translateX(-50%);
+    width: 200px;
+    height: 200px;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.monster img{
+    width: 100%;
+    height: 100%;
+}
+
+.control_screen{
+    position: relative;
+    background-color: black;
+}
+
+.party{
+    display: flex;
+    justify-content:center;
+    padding: 30px 0;
+}
+
+
+.party p {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border: 3px #e6b422 solid;
+    border-radius: 5px;
+}
+
+.party p:not(:last-child) {
+    margin-right: 40px;
+}
+
+.party p  img{
+    width: 100%;
+}
+
+.random_box{
+    display: flex;
+    justify-content:center;
+    padding-bottom: 30px;
+}
+
+.random_box p {
+    width: 70px;
+    height: 70px;
+    border: 3px #555555 solid;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.random_box p:not(:last-child) {
+    margin-right: 40px;
+}
+
+.random_box p img{
+    width: 100%;
+}
+
+.stop_box{
+    display: flex;
+    justify-content:center;
+}
+
+.stop_button{
+    border-radius: 90px;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(to right, red, white);
+}
+
+.stop_button:not(:last-child){
+    margin-right: 85px;
+}
+
+.start_button{
+    margin: 20px auto;
+    height: 120px;
+    width: 120px;
+}
+
+.start_button img{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 750px) {
+    .game_screen{
+        margin: 0;
+        width: 100vw;
+    }
+    .state-cover{
+        font-size: 12px;
+    }
+    .start_screen{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+    }
+    .start_screen span{
+        font-size: 12px;
+    }
+    .monster{
+        width: 150px;
+        height: 150px;
+    }
+
+    .party p {
+        width: 60px;
+        height: 60px;
+    }
+
+    .party p:not(:last-child) {
+        margin-right: 25px;
+    }
+    .random_box p {
+        width: 60px;
+        height: 60px;
+    }
+
+    .random_box p:not(:last-child) {
+        margin-right: 25px;
+    }
+
+    .stop_button{
+        border-radius: 90px;
+        width: 20px;
+        height: 20px;
+        background: linear-gradient(to right, red, white);
+    }
+
+    .stop_button:not(:last-child){
+        margin-right: 65px;
+    }
+    .start_button{
+        margin: 10px auto;
+        height: 80px;
+        width: 80px;
+    }
+
+}
